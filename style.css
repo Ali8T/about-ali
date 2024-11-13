@@ -18,6 +18,16 @@ header h1 {
     margin: 0;
 }
 
+h1 i, h2 i {
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+#links i {
+    color: #4a90e2;
+    margin-right: 5px;
+}
+
 section {
     margin: 20px 0;
     padding: 20px;
