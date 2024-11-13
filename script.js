@@ -1,91 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const welcomeMessage = document.createElement("div");
+    welcomeMessage.textContent = "مرحباً بك في موقعي الشخصي!";
+    welcomeMessage.style.position = "fixed";
+    welcomeMessage.style.top = "20px";
+    welcomeMessage.style.left = "50%";
+    welcomeMessage.style.transform = "translateX(-50%)";
+    welcomeMessage.style.backgroundColor = "#4a90e2";
+    welcomeMessage.style.color = "#fff";
+    welcomeMessage.style.padding = "10px 20px";
+    welcomeMessage.style.borderRadius = "5px";
+    welcomeMessage.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.3)";
+    welcomeMessage.style.opacity = "0";
+    welcomeMessage.style.transition = "opacity 1s ease";
 
-header {
-    background-color: #4a90e2;
-    color: #fff;
-    padding: 20px;
-    animation: fadeIn 2s ease-out;
-}
+    document.body.appendChild(welcomeMessage);
 
-header h1 {
-    font-size: 2em;
-    margin: 0;
-}
+    setTimeout(() => {
+        welcomeMessage.style.opacity = "1";
+    }, 500);
 
-h1 i, h2 i {
-    color: #ffffff;
-    margin-right: 8px;
-}
-
-#links i {
-    color: #4a90e2;
-    margin-right: 5px;
-}
-
-section {
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-section:hover {
-    transform: scale(1.05);
-}
-
-img {
-    width: 150px;
-    border-radius: 50%;
-    margin-top: 10px;
-    transition: transform 0.5s ease;
-}
-
-img:hover {
-    transform: rotate(360deg);
-}
-
-#links ul {
-    list-style: none;
-    padding: 0;
-}
-
-#links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-#links a {
-    color: #4a90e2;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-#links a:hover {
-    color: #ff6347;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 10px;
-    animation: fadeInUp 2s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    setTimeout(() => {
+        welcomeMessage.style.opacity = "0";
+    }, 3500);
+});
