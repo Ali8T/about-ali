@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const welcomeMessage = document.createElement("div");
-    welcomeMessage.textContent = "مرحباً بك في موقعي الشخصي!";
+    welcomeMessage.textContent = "Welcome to my personal site!";
     welcomeMessage.style.position = "fixed";
     welcomeMessage.style.top = "20px";
     welcomeMessage.style.left = "50%";
